@@ -1,7 +1,10 @@
 <html>
 <head>
   <!-- Link the style sheet here -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
+
 <div>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
     <div class="container-fluid">
@@ -24,45 +27,51 @@
       </div>
     </div>
   </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
+
+  <!-- About Us Section -->
+  <div class="card" style="width: 80%; margin: auto; margin-top:5%;">
+    <div class="banner" name="about-header">
       <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+      <h1>About Us</h1>
+      <p>Welcome to Best Cars dealership, home to the best cars in North America. We deal in the sale of domestic and imported cars at reasonable prices. Our mission is to provide quality vehicles with exceptional customer service, ensuring our customers drive away happy with their purchase.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-around; margin:auto">
+      
+      <!-- Person 1 -->
+      <div class="card" style="width: 30%; margin-bottom: 2rem;">
+        <img class="card-img-top" src="/static/person1.jpg" alt="John Doe">
         <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+          <p class="title">John Doe</p>
+          <p>CEO</p>
+          <p class="card-text">John has over 15 years of experience in the automotive industry and leads our dealership with a passion for great cars and customer satisfaction.</p>
+          <p>john.doe@example.com</p>
         </div>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+      <!-- Person 2 -->
+      <div class="card" style="width: 30%; margin-bottom: 2rem;">
+        <img class="card-img-top" src="/static/person2.jpg" alt="Jane Smith">
         <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+          <p class="title">Jane Smith</p>
+          <p>Sales Manager</p>
+          <p class="card-text">With an extensive background in customer relations and a keen eye for car models, Jane ensures that each customer gets the best deal possible.</p>
+          <p>jane.smith@example.com</p>
         </div>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+      <!-- Person 3 -->
+      <div class="card" style="width: 30%; margin-bottom: 2rem;">
+        <img class="card-img-top" src="/static/person3.jpg" alt="Mark Johnson">
         <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+          <p class="title">Mark Johnson</p>
+          <p>Lead Mechanic</p>
+          <p class="card-text">Mark ensures that every car on our lot is in top condition and ready for sale, bringing years of mechanical expertise to the team.</p>
+          <p>mark.johnson@example.com</p>
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    
+  </div>
 </div>
 
 </html>
