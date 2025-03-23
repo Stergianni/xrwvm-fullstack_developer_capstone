@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 import PostReview from "./components/Dealers/PostReview"
 import LoginPanel from "./components/Login/Login"
 import RegisterPanel from "./components/Register/Register"
