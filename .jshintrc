@@ -1,7 +1,6 @@
 {
   "esversion": 6,
+  "esnext": true,
   "asi": true,
-  "boss": true,
-  "eqeqeq": true,
-  "esnext": true
+  "eqeqeq": true
 }
