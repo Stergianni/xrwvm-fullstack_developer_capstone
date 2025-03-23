@@ -34,7 +34,8 @@ def get_cars(request):
     car_models = CarModel.objects.select_related("car_make")
     cars = []
     for car_model in car_models:
-        cars.append({"CarModel": car_model.name, "CarMake": car_model.car_make.name})
+        cars.append({"CarModel": car_model.name,
+                     "CarMake": car_model.car_make.name})
     return JsonResponse({"CarModels": cars})
 
 
@@ -79,7 +80,7 @@ def registration(request):
         # Check if user already exists
         User.objects.get(username=username)
         username_exist = True
-    except:
+    except BaseException:
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
 
@@ -144,7 +145,9 @@ def get_dealer_reviews(request, dealer_id):
 
             return JsonResponse({"status": 200, "reviews": reviews})
         except Exception as e:
-            logger.error(f"Error fetching reviews for dealer {dealer_id}: {str(e)}")
+            logger.error(
+                f"Error fetching reviews for dealer {dealer_id}: {
+                    str(e)}")
             return JsonResponse(
                 {"status": 500, "error": "Failed to fetch reviews"}, status=500
             )
@@ -159,10 +162,13 @@ def get_dealer_details(request, dealer_id):
         try:
             dealership = get_request(endpoint)
             if not dealership:
-                return JsonResponse({"status": 404, "message": "Dealer not found"})
+                return JsonResponse(
+                    {"status": 404, "message": "Dealer not found"})
             return JsonResponse({"status": 200, "dealer": dealership})
         except Exception as e:
-            logger.error(f"Error fetching dealer details for {dealer_id}: {str(e)}")
+            logger.error(
+                f"Error fetching dealer details for {dealer_id}: {
+                    str(e)}")
             return JsonResponse(
                 {"status": 500, "error": "Failed to fetch dealer details"}, status=500
             )
@@ -179,6 +185,7 @@ def add_review(request):
             return JsonResponse({"status": 200})
         except Exception as e:
             logger.error(f"Error posting review: {str(e)}")
-            return JsonResponse({"status": 401, "message": "Error in posting review"})
+            return JsonResponse(
+                {"status": 401, "message": "Error in posting review"})
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
