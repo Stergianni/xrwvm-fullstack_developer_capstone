@@ -1,4 +1,4 @@
-# Uncomment the required imports before adding the code
+# Uncomment the required imports before adding the code 
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
@@ -15,6 +15,8 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 
 # Create a 'get_cars' view to handle db request
+
+
 def get_cars(request):
     count = CarMake.objects.filter().count()
     print(count)
@@ -144,7 +146,7 @@ def get_dealer_reviews(request, dealer_id):
             return JsonResponse({"status": 200, "reviews": reviews})
 
         except Exception as e:
-            logger.error(f"Error fetching reviews for dealer {dealer_id}: {str(e)}")
+            logger.error(f"Error fetching reviews {dealer_id}: {str(e)}")
             return JsonResponse(
                 {"status": 500, "error": "Failed to fetch reviews"}, status=500
             )
@@ -167,9 +169,9 @@ def get_dealer_details(request, dealer_id):
             return JsonResponse({"status": 200, "dealer": dealership})
 
         except Exception as e:
-            logger.error(f"Error fetching dealer details for {dealer_id}: {str(e)}")
+            logger.error(f"Error fetching dealer {dealer_id}: {str(e)}")
             return JsonResponse(
-                {"status": 500, "error": "Failed to fetch dealer details"}, status=500
+                {"status": 500, "error": "Failed to fetch dealer "}, status=500
             )
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
