@@ -1,0 +1,53 @@
+{% load static %} <!-- Load static files in Django templates -->
+
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+</head>
+<body>
+    <div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="card" style="width: 35%; margin: auto; margin-top:5%;">
+    <img src="{% static 'cars.jpeg' %}" class="img-fluid" alt="Cars Image" style="width: 100%; height: auto;">
+  </div>
+  <div class="card" style="width: 35%; margin: auto; margin-top:5%;">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'contactus.png' %}" class="img-fluid" alt="Contact Us Image" style="width: 100%; height: auto;">
+      </div>
+      <div class="col-md-6">
+        <h2>Contact Information</h2>
+        <p>We would love to hear from you! Below are the contact details:</p>
+        
+        <p><strong>Phone:</strong> +1 (555) 987-6543</p>
+        <p><strong>Email:</strong> <a href="mailto:info@bestcars.com">info@bestcars.com</a></p>
+        <p><strong>Address:</strong> 1234 Dealership Blvd, Car City, Car State 56789</p>
+        <p><strong>Business Hours:</strong> Monday to Friday: 9:00 AM - 6:00 PM, Saturday: 10:00 AM - 4:00 PM</p>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
