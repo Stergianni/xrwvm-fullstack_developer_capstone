@@ -14,9 +14,8 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 
+
 # Create a 'get_cars' view to handle db request
-
-
 def get_cars(request):
     count = CarMake.objects.filter().count()
     print(count)
@@ -171,7 +170,7 @@ def get_dealer_details(request, dealer_id):
         except Exception as e:
             logger.error(f"Error fetching dealer {dealer_id}: {str(e)}")
             return JsonResponse(
-                {"status": 500, "error": "Failed to fetch dealer "}, status=500
+                {"status": 500, "error": "Failed to fetch dealer"}, status=500
             )
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
@@ -188,6 +187,7 @@ def add_review(request):
         except Exception as e:
             logger.error(f"Error posting review: {str(e)}")
             return JsonResponse(
-                {"status": 401, "message": "Error in posting review"})
+                {"status": 401, "message": "Error in posting review"}
+            )
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
