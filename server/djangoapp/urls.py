@@ -31,8 +31,8 @@ urlpatterns = [
     path(
         route="reviews/dealer/<int:dealer_id>",
         view=views.get_dealer_reviews,
-        name="dealer_details",
+        name="dealer_reviews",
     ),
     # path for get_cars view
-    path(route="get_cars", view=views.get_cars, name="getcars"),
+    path(route="get_cars", view=views.get_cars, name="get_cars"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
