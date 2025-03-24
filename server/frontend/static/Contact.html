@@ -1,12 +1,10 @@
-{% load static %} <!-- Load static files in Django templates -->
-
 <html>
 <head>
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <!-- Link the style sheet here -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
-<body>
-    <div>
+<div>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
     <div class="container-fluid">
       <h2 style="padding-right: 5%;">Dealerships</h2>
@@ -28,26 +26,37 @@
       </div>
     </div>
   </nav>
-  <div class="card" style="width: 35%; margin: auto; margin-top:5%;">
-    <img src="{% static 'cars.jpeg' %}" class="img-fluid" alt="Cars Image" style="width: 100%; height: auto;">
-  </div>
-  <div class="card" style="width: 35%; margin: auto; margin-top:5%;">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="{% static 'contactus.png' %}" class="img-fluid" alt="Contact Us Image" style="width: 100%; height: auto;">
-      </div>
-      <div class="col-md-6">
-        <h2>Contact Information</h2>
-        <p>We would love to hear from you! Below are the contact details:</p>
-        
-        <p><strong>Phone:</strong> +1 (555) 987-6543</p>
-        <p><strong>Email:</strong> <a href="mailto:info@bestcars.com">info@bestcars.com</a></p>
-        <p><strong>Address:</strong> 1234 Dealership Blvd, Car City, Car State 56789</p>
-        <p><strong>Business Hours:</strong> Monday to Friday: 9:00 AM - 6:00 PM, Saturday: 10:00 AM - 4:00 PM</p>
-        
+  
+
+<div class="container text-center mt-5">
+  <div class="card mx-auto" style="width: 80%;">
+    <div class="card-header bg-light">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="card-body">
+      <img src="/static/cars.jpeg" class="img-fluid" alt="Dealership Image">
+      <h2 class="mt-4">Sample</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <img src="/static/contactus.png" class="img-fluid" alt="Customer Support">
+        </div>
+        <div class="col-md-8 text-start">
+          <p><strong>Contact Customer Service</strong></p>
+          <p>support@bestcars.com</p>
+          <p><strong>Contact our National Advertising Team</strong></p>
+          <p>NationalSales@bestcars.com</p>
+          <p><strong>Contact our Public Relations Team</strong></p>
+          <p>PR@bestcars.com</p>
+          <p><strong>Contact the bestcars.com offices</strong></p>
+          <p>312-611-1111</p>
+          <p><strong>Become a bestcars.com car dealer</strong></p>
+          <p>Visit <a href="https://growwithbestcars.com">growwithbestcars.com</a></p>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
-</body>
+<script src="/static/bootstrap.bundle.min.js"></script>
+
 </html>
